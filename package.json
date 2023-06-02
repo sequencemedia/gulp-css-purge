@@ -1,45 +1,52 @@
 {
-  "name": "gulp-css-purge",
-  "version": "3.0.9",
-  "description": "gulp plugin to purge, burn, reduce, shorten, compress, clean, trim and format duplicate, extra, excess or bloated CSS with CSS-PURGE.",
-  "homepage": "https://github.com/rbtech/gulp-css-purge",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rbtech/gulp-css-purge.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rbtech/gulp-css-purge/issues"
-  },
-  "readmeFilename": "README.md",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Andrew Quan <andrewq@redblueprint.com> (http://redblueprint.com)",
-  "license": "MIT",
+  "name": "@sequencemedia/gulp-css-purge",
+  "version": "1.0.0",
+  "description": "CSS Purge for Gulp",
   "keywords": [
-    "gulpplugin",
-    "CSS-PURGE gulp plugin",
+    "gulp plugin",
     "css",
     "purge",
     "clean",
     "minify",
     "uglify",
-    "duplicate",
-    "deduplicate",
-    "duplicate css",
-    "duplicate rules",
-    "duplicate properties",
     "purge-css",
-    "minify-css",
-    "gulp-minify-css",
-    "gulp-purge-css",
-    "gulpfriendly"
+    "gulp-purge-css"
   ],
+  "main": "./index.mjs",
+  "type": "module",
+  "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
+  "contributors": [
+    "Andrew Quan <andrewq@redblueprint.com> (http://redblueprint.com)"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sequencemedia/gulp-css-purge.git"
+  },
+  "homepage": "https://github.com/sequencemedia/gulp-css-purge",
+  "bugs": {
+    "url": "https://github.com/sequencemedia/gulp-css-purge/issues"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .mjs --ext .cjs",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "css-purge": "^3.1.0",
-    "gulp-util": "^3.0.8",
+    "plugin-error": "^2.0.1",
     "through2": "^2.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/eslint-parser": "^7.21.8",
+    "@babel/preset-env": "^7.22.4",
+    "@sequencemedia/hooks": "^1.0.431",
+    "eslint": "^8.41.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3"
+  }
 }
