@@ -9,8 +9,9 @@
     "clean",
     "minify",
     "uglify",
-    "purge-css",
-    "gulp-purge-css"
+    "css-purge",
+    "gulp-purge-css",
+    "purge-css"
   ],
   "main": "./index.mjs",
   "type": "module",

@@ -9,11 +9,17 @@ const PLUGIN_NAME = '@sequencemedia/gulp-css-purge'
 const DEFAULT_OPTIONS = {
   trim: true,
   shorten: true,
-  format_font_family: true
+  format: true,
+  report: false,
+  verbose: false
 }
 
 function streamWrite (css) {
   return this.write(css)
+}
+
+function getVinylFileName (file) {
+  return file.stem + file.extname
 }
 
 function getTransformFor (options) {
@@ -23,11 +29,13 @@ function getTransformFor (options) {
       return
     }
 
+    const fileName = getVinylFileName(file)
+
     if (file.isStream()) {
       const fileContents = file.contents ? file.contents.toString() : ''
 
       try {
-        cssPurge.purgeCSS(fileContents, options, (error, css) => {
+        cssPurge.purgeCSS(fileContents, { file_name: fileName, ...options }, (error, css) => {
           if (error) {
             done(new PluginError(PLUGIN_NAME, error))
             return
@@ -52,7 +60,7 @@ function getTransformFor (options) {
       const fileContents = file.contents ? file.contents.toString() : ''
 
       try {
-        cssPurge.purgeCSS(fileContents, options, (error, css) => {
+        cssPurge.purgeCSS(fileContents, { file_name: fileName, ...options }, (error, css) => {
           if (error) {
             done(new PluginError(PLUGIN_NAME, error))
             return
@@ -81,8 +89,6 @@ function getTransformFor (options) {
 }
 
 export default function gulpCSSPurge (options = DEFAULT_OPTIONS) {
-  delete options.reduceConfig
-
   const transform = getTransformFor(options)
 
   return new Transform({ transform, objectMode: true })
