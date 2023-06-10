@@ -19,7 +19,11 @@ function streamWrite (css) {
 }
 
 function getVinylFileName (file) {
-  return file.stem + file.extname
+  return file.basename || (file.stem + file.extname)
+}
+
+function getVinylFilePath (file) {
+  return file.path
 }
 
 function getTransformFor (options) {
@@ -29,13 +33,18 @@ function getTransformFor (options) {
       return
     }
 
-    const fileName = getVinylFileName(file)
-
     if (file.isStream()) {
       const fileContents = file.contents ? file.contents.toString() : ''
+      const fileName = getVinylFileName(file)
+      const filePath = getVinylFilePath(file)
+      const fileOptions = {
+        file_name: fileName,
+        file_path: filePath,
+        ...options
+      }
 
       try {
-        cssPurge.purgeCSS(fileContents, { file_name: fileName, ...options }, (error, css) => {
+        cssPurge.purgeCSS(fileContents, fileOptions, (error, css) => {
           if (error) {
             done(new PluginError(PLUGIN_NAME, error))
             return
@@ -58,9 +67,16 @@ function getTransformFor (options) {
 
     if (file.isBuffer()) {
       const fileContents = file.contents ? file.contents.toString() : ''
+      const fileName = getVinylFileName(file)
+      const filePath = getVinylFilePath(file)
+      const fileOptions = {
+        file_name: fileName,
+        file_path: filePath,
+        ...options
+      }
 
       try {
-        cssPurge.purgeCSS(fileContents, { file_name: fileName, ...options }, (error, css) => {
+        cssPurge.purgeCSS(fileContents, fileOptions, (error, css) => {
           if (error) {
             done(new PluginError(PLUGIN_NAME, error))
             return
