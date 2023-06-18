@@ -1,7 +1,7 @@
 import {
   Transform
 } from 'node:stream'
-import cssPurge from 'css-purge'
+import cssPurge from '@sequencemedia/css-purge'
 import PluginError from 'plugin-error'
 
 const PLUGIN_NAME = '@sequencemedia/gulp-css-purge'
