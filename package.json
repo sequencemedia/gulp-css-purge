@@ -38,7 +38,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.1",
+    "@sequencemedia/css-purge": "^1.0.2",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
