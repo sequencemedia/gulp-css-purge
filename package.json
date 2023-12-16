@@ -38,7 +38,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.26",
+    "@sequencemedia/css-purge": "^1.0.27",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "@babel/eslint-parser": "^7.23.3",
     "@babel/preset-env": "^7.23.6",
     "@sequencemedia/hooks": "^1.0.468",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
     "husky": "^8.0.3"
   },
