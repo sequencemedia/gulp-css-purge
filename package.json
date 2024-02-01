@@ -38,12 +38,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.40",
+    "@sequencemedia/css-purge": "^1.0.41",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
-    "@babel/eslint-parser": "^7.23.9",
+    "@babel/eslint-parser": "^7.23.10",
     "@babel/preset-env": "^7.23.9",
     "@sequencemedia/hooks": "^1.0.476",
     "eslint": "^8.56.0",
