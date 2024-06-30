@@ -23,7 +23,7 @@
   "contributors": [
     "Andrew Quan <andrewq@redblueprint.com> (http://redblueprint.com)"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "engines": {
     "node": ">=18.12.0 <=21.7.3 || >=22.2.0"
   },
@@ -41,7 +41,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.71",
+    "@sequencemedia/css-purge": "^1.0.72",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
