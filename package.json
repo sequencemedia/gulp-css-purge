@@ -18,7 +18,7 @@
   "author": {
     "name": "Jonathan Perry for Sequence Media Limited",
     "email": "sequencemedia@sequencemedia.net",
-    "url": "http://sequencemedia.net"
+    "url": "https://sequencemedia.net"
   },
   "contributors": [
     "Andrew Quan <andrewq@redblueprint.com> (http://redblueprint.com)"
@@ -41,14 +41,14 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.72",
+    "@sequencemedia/css-purge": "^1.0.73",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/eslint-parser": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
-    "@sequencemedia/hooks": "^1.0.495",
+    "@sequencemedia/hooks": "^1.0.496",
     "eslint": "8.57.0",
     "eslint-config-standard": "^17.1.0",
     "husky": "^9.0.11"
