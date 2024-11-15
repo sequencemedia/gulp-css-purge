@@ -41,7 +41,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.156",
+    "@sequencemedia/css-purge": "^1.0.157",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
