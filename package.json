@@ -31,7 +31,7 @@
     "type": "git",
     "url": "https://github.com/sequencemedia/gulp-css-purge.git"
   },
-  "homepage": "https://github.com/sequencemedia/gulp-css-purge",
+  "homepage": "https://github.com/sequencemedia/gulp-css-purge#readme",
   "bugs": {
     "url": "https://github.com/sequencemedia/gulp-css-purge/issues"
   },
@@ -41,14 +41,14 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.223",
+    "@sequencemedia/css-purge": "^1.0.224",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/eslint-parser": "^7.27.1",
     "@babel/preset-env": "^7.27.1",
-    "@sequencemedia/eslint-config-standard": "^0.2.53",
+    "@sequencemedia/eslint-config-standard": "^0.2.54",
     "eslint": "^9.26.0",
     "globals": "^16.0.0",
     "husky": "^9.1.7"
