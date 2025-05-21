@@ -41,14 +41,14 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/css-purge": "^1.0.232",
+    "@sequencemedia/css-purge": "^1.0.233",
     "plugin-error": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/eslint-parser": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
-    "@sequencemedia/eslint-config-standard": "^0.2.61",
+    "@sequencemedia/eslint-config-standard": "^0.2.62",
     "eslint": "^9.27.0",
     "globals": "^16.1.0",
     "husky": "^9.1.7"
