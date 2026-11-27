@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/gulp-css-purge",
-  "version": "1.1.347",
+  "version": "1.1.348",
   "description": "CSS Purge for Gulp",
   "keywords": [
     "gulp plugin",
